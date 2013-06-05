@@ -7,3 +7,15 @@
 th {
   text-align: left;
 }
+
+.success {
+  background-color: #bbffbb;
+}
+
+.error {
+  background-color: #ffbbbb;
+}
+
+a {
+  color: black;
+}

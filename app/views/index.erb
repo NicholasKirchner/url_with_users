@@ -6,10 +6,10 @@
   </form>
 
   <% if @short_url %>
-    <p>Your link is <a href="http://localhost:9393/<%= @short_url %>">http://localhost:9393/<%= @short_url %></a></p>
+    <p class = "success">Your link is <a href="http://localhost:9393/<%= @short_url %>">http://localhost:9393/<%= @short_url %></a></p>
   <% end %>
 
   <% if @saved == false %>
-    <p>Oops... save was unsuccessful.  Try again, making sure you entered a proper URL</p>
+    <p class = "error">Oops... save was unsuccessful.  Try again, making sure you entered a proper URL</p>
   <% end %>
 </div>
