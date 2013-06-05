@@ -12,7 +12,10 @@ class Url < ActiveRecord::Base
   # end
 
   def generate_short_url
-    self.short_url = SecureRandom.hex(10)
+    unless self.short_url
+      self.short_url = SecureRandom.hex(10)
+    end
+    self.short_url
   end
 
   def full_short_url

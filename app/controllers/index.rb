@@ -12,5 +12,10 @@ end
 
 # e.g., /q6bda
 get '/:short_url' do
+  #url = Url.where("short_url = ?", params[:short_url]).first
+  url = Url.find_by_short_url(params[:short_url])
+  url.click_count += 1
+  url.save
+  redirect url.long_url
   # redirect to appropriate "long" URL
 end
