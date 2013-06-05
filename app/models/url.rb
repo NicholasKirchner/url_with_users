@@ -5,7 +5,7 @@ class Url < ActiveRecord::Base
 
   before_save :generate_short_url 
 
-  validates_presence_of :long_url
+  validates :long_url, :format => { :with => /^https?:\/\// }
   # validates_each :long_url do |record, attr, value|
   #   p "record: #{record}, attr: #{attr}, value: #{value}"
   #   record.errors.add(attr, 'must be a valid URI') if valid_url?(value)

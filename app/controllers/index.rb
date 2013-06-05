@@ -1,12 +1,18 @@
 get '/' do
   @short_url = session.delete(:short_url) if session[:short_url]
+  p "saved_2 : #{session[:saved]}"
+  @saved = session.delete(:saved) if session[:saved] == false
+  p "saved_3 : #{@saved}"
   # let user create new short URL, display a list of shortened URLs
   erb :index
 end
 
 post '/urls' do
-  new_url = Url.create(params)
+  new_url = Url.new(params)
+  saved = new_url.save
+  p "saved_1 : #{saved}"
   session[:short_url] = new_url.short_url
+  session[:saved] = saved
   redirect '/'
 end
 
