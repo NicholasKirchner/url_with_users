@@ -1,8 +1,10 @@
-.container {
+body .container {
   margin: 20px auto;
   width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  padding: 10px 20px 20px 20px;
+/*  border: 1px dotted #222;
+*/color: #010b19;
+  box-shadow: 1px 1px 1px #DDD;
 }
 th {
   text-align: left;
@@ -18,4 +20,66 @@ th {
 
 a {
   color: black;
+}
+
+header {
+  background-color: #f9fafa;
+  height: 60px;
+  box-shadow: 1px 1px 1px #DDD;
+}
+
+.container h1 {
+  color: #D8B82F;
+  text-shadow: 1px 1px 1px #9b8112;
+}
+
+.title {
+  padding-left: 40px;
+  padding-top: 10px;
+  vertical-align: middle;
+  color: #5D6073;
+  text-shadow: 1px 1px 1px #21264a;
+}
+
+.title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-image: url('../squairy_light.png');
+}
+
+.container {
+  background-color: #f9fafa;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.all_links {
+  margin-top: 10px;
+}
+
+.welcome {
+  display: inline-block;
+}
+
+.logout-btn {
+  display: inline;
+  margin-left: 5px;
+  font-size: 0.66em;
+  position: relative;
+  bottom: 5px;
+}
+
+li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+ul {
+  padding-left: 0;
 }

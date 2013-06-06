@@ -5,6 +5,8 @@ class Url < ActiveRecord::Base
 
   before_save :generate_short_url 
 
+  belongs_to :user
+
   validates :long_url, :format => { :with => /^https?:\/\// }
   # validates_each :long_url do |record, attr, value|
   #   p "record: #{record}, attr: #{attr}, value: #{value}"
@@ -13,13 +15,13 @@ class Url < ActiveRecord::Base
 
   def generate_short_url
     unless self.short_url
-      self.short_url = SecureRandom.hex(10)
+      self.short_url = SecureRandom.hex(3)
     end
     self.short_url
   end
 
   def full_short_url
-    "localhost:9393/" + self.short_url
+    "localhost:9393/l/" + self.short_url
   end
 
   # def self.valid_url?(value)

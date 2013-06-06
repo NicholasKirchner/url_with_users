@@ -1,0 +1,14 @@
+<div class="container">
+  <h1><%= @user.name %>'s Links</h1>
+  <p>
+    <ul>
+      <% @urls.each do |url| %>
+        <li>
+          <%= "(#{url.click_count} clicks) #{url.long_url} => " %>
+          <a href="<%=url.full_short_url%>"> <%=url.full_short_url%>  </a>
+        </li>
+        <% end %>
+     </ul>
+  </p>
+
+</div>
